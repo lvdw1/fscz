@@ -1,0 +1,94 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('back.jpg') no-repeat center center fixed; /* Webpage background */
+  background-size: cover; /* Ensures the background image covers the entire viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Patrick Hand', cursive; /* Updated font for handwritten look */
+}
+
+/* Flipbook container must have a fixed width and height */
+#flipbook {
+  width: 90vw; /* Adjusted to fit the viewport dynamically */
+  height: calc(90vw * 9 / 16); /* Maintain 16:9 aspect ratio based on width */
+  max-height: 90vh; /* Prevent overflow in smaller viewports */
+  margin: auto; /* Center the flipbook */
+}
+#flipbook .page video {
+  display: block; /* Ensures the video is treated as a block element */
+  max-width: 90%; /* Keeps the video responsive and smaller than the page */
+  height: auto; /* Maintains the aspect ratio */
+  margin: auto; /* Centers the video horizontally */
+  border: 5px solid #d2b48c; /* Adds a decorative border */
+  border-radius: 20px; /* Rounds the corners for a softer look */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a soft shadow for depth */
+  overflow: hidden; /* Ensures no content overflows rounded corners */
+}
+/* Each “page” inside the flipbook */
+#flipbook .page {
+  display:flex;
+  flex-direction: column; /* Ensure content flows vertically */
+  justify-content: flex-start; /* Start content at the top */
+  align-items: center; /* Align content to the left */
+  width: 1280px;   /* Width for PowerPoint slide */
+  height: 720px;   /* Height for PowerPoint slide */
+  background-color: #f3eac2; /* Yellowish background for all pages */
+  border: 1px solid #d2b48c;
+  box-sizing: border-box;
+
+  /* Center text inside the page */
+  text-align: center;
+  line-height: 720px; /* Center text vertically */
+  font-size: 24px;
+  font-family: 'Patrick Hand', cursive; /* Updated font for handwritten look */
+  color: #5b4636;
+  position: relative; /* Enable layering for the first page */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* First page specific styling */
+#flipbook .page:first-child {
+  position: relative; /* Ensure positioning for layering */
+  background-color: #f3eac2; /* Explicitly set yellowish background for consistency */
+}
+
+#flipbook .page:first-child img.first-page-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image cover the entire page */
+  z-index: 0; /* Places the image in the background */
+}
+
+#flipbook .page:first-child span {
+  position: relative;
+  z-index: 1; /* Ensures text is above the image */
+  color: #ffffff; /* Make text readable on the image */
+  font-family: 'Patrick Hand', cursive; /* Updated font for handwritten look */
+}
+
+/* Ensure other pages have their yellowish background */
+#flipbook .page:not(:first-child) {
+  background-color: #f3eac2; /* Yellowish background for other pages */
+  color: #5b4636; /* Text color for other pages */
+  line-height: 720px; /* Center text vertically on other pages */
+  font-family: 'Patrick Hand', cursive; /* Updated font for handwritten look */
+}
+#flipbook .page.letter-page span {
+  color: #000000 !important; /* Force black text */
+  font-size: 14px; /* Adjust font size */
+  line-height: 1.6; /* Add proper line spacing */
+  text-align: justify; /* Justify the text for neat alignment */
+  word-wrap: break-word; /* Handle long words */
+  overflow-wrap: break-word; /* Handle overflow */
+  white-space: normal; /* Allow text to wrap naturally */
+  width: 80%; /* Constrain width for better readability */
+  margin: auto; /* Center the span horizontally */
+  display: block; /* Ensure the span behaves as a block-level element */
+}
