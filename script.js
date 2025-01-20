@@ -1,8 +1,10 @@
 $(document).ready(function () {
   // Initialize turn.js
+  const flipbookWidth = 0.60*$(window).width()
+  const flipbookHeight = 0.4*$(window).height()
   $('#flipbook').turn({
-    width: 800,        // Total width for the flipbook
-    height: 500,       // Total height for the flipbook
+    width: flipbookWidth,        // Total width for the flipbook
+    height: flipbookHeight,       // Total height for the flipbook
     autoCenter: true,  // Center the flipbook on the page
     display: 'double', // Show two pages side by side
     duration: 1000,    // Duration of the page turn animation
