@@ -10,11 +10,6 @@ $(document).ready(function () {
     duration: 1000,    // Duration of the page turn animation
     gradients: true,   // Enable gradient effect
     acceleration: true,
-    when: {
-      turning: function (event, page, view) {
-        event.preventDefault();
-      },
-    },
   });
 
   // Add keydown event listener for flipping pages with arrow keys

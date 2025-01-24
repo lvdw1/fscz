@@ -18,6 +18,7 @@ body {
   height: calc(90vw * 9 / 16); /* Maintain 16:9 aspect ratio based on width */
   max-height: 90vh; /* Prevent overflow in smaller viewports */
   margin: auto; /* Center the flipbook */
+  z-Index : 9999999;
 }
 #flipbook .page video {
   display: block; /* Ensures the video is treated as a block element */
