@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // Initialize turn.js
-  const flipbookWidth = 0.60*$(window).width()
-  const flipbookHeight = 0.4*$(window).height()
+  const flipbookWidth = 0.90*$(window).width()
+  const flipbookHeight = 0.6*$(window).height()
   $('#flipbook').turn({
     width: flipbookWidth,        // Total width for the flipbook
     height: flipbookHeight,       // Total height for the flipbook
