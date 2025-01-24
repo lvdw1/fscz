@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('back.jpg') no-repeat center center fixed; /* Webpage background */
+  background: url('back-min.jpg') no-repeat center center fixed; /* Webpage background */
   background-size: cover; /* Ensures the background image covers the entire viewport */
   display: flex;
   justify-content: center;
