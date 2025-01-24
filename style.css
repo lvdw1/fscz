@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: 'Patrick Hand', cursive; /* Updated font for handwritten look */
+  overflow: hidden;
 }
 
 /* Flipbook container must have a fixed width and height */
